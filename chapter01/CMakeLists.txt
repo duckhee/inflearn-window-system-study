@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.25)
+
+add_subdirectory(01_thread_begin)
+add_subdirectory(02_beginthreadex)
+add_subdirectory(03_thread_control)
