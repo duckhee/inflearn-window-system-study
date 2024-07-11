@@ -113,3 +113,7 @@ gen
 ### make build folder ###
 buildDir
 buildDir/
+
+### visual studio ###
+.vs
+.vs/
