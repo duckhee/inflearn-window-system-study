@@ -32,8 +32,8 @@ int main(int argc, char **argv) {
             NULL, // Thread에 대한 보안 속성에 대해서 설정 값을 넣어준다. -> NULL을 넣어줄 시 부모 Thread의 속성을 상속 받는다.
             0, // Thread에 부여할 Stack의 크기를 인자로 넣어준다. -> 기본 값은 1MB이다.
             ThreadFunction, // Thread 내부에서 실행할 함수에 대해서 넣어준다.
-            (LPVOID )hEvent, // Thread 함수에 전달할 파라미터에 대해서 넣어준다.
-            0, //
+            (LPVOID) hEvent, // Thread 함수에 전달할 파라미터에 대해서 넣어준다.
+            0, // Thread의 생성에 대한 속성을 정의해서 넘겨준다. -> 0일때는 기본적으로 생성이 되자마자 실행 된다.
             &hThreadId // Thread에 대한 ID 값을 저장하기 위한 변수의 주소 값을 넣어준다.
     );
 
