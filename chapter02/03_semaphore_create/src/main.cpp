@@ -80,4 +80,5 @@ int main(int argc, char **argv) {
     }
     /** semaphore에 대한 객체 반환 */
     ::CloseHandle(g_hSema);
+    return 0;
 }
