@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\fain9\source\repos\inflearn-window-system-study\chapter02\03_semaphore_create\src\main.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\fain9\source\repos\inflearn-window-system-study\chapter02\03_semaphore_create\src\main.cpp(15,15): warning C4311: '형식 캐스트': 'LPVOID'에서 'int'(으)로 포인터가 잘립니다.
+C:\Users\fain9\source\repos\inflearn-window-system-study\chapter02\03_semaphore_create\src\main.cpp(15,15): warning C4302: '형식 캐스트': 'LPVOID'에서 'int'(으)로 잘립니다.
+C:\Users\fain9\source\repos\inflearn-window-system-study\chapter02\03_semaphore_create\src\main.cpp(47,4): warning C4312: '형식 캐스트': 'int'에서 더 큰 'LPVOID'(으)로의 변환입니다.
+  03_semaphore_create.vcxproj -> C:\Users\fain9\source\repos\inflearn-window-system-study\chapter02\03_semaphore_create\x64\Debug\03_semaphore_create.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
