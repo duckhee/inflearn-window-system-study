@@ -13,11 +13,11 @@ int main(int argc, char **argv) {
             NULL, // 보안 설정에 대해서 상속을 받도록 설정
             CREATE_ALWAYS, // 항상 새로운 파일을 만들기 위한 설정
             FILE_ATTRIBUTE_NORMAL | FILE_FLAG_OVERLAPPED, // 파일에 대한 기본 속성과 비동기 요청에 대해서 사용하기 위한 속성 추가
-            NULL
+            NULL // 파일 생성 시 파일에 대한 특성 및 확장 특성을 제공을 할지에 대해서 추가하는 속성
     );
-    /** */
+    /** 실제로 사용이 파일에 쓴 byte의 갯수를 저장하기 위한 변수 */
     DWORD dwRead;
-    /** */
+    /** 중첩된 처리를 위한 구조체 배열 */
     OVERLAPPED aOverLapped[3] = {0,};
     /** 파일에 대한 이벤트를 저장하기 위한 배열 */
     HANDLE aFileEvent[3] = {0,};
