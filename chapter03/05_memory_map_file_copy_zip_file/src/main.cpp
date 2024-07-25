@@ -86,23 +86,25 @@ int main(int argc, char **argv) {
     }
     /** 중첩 처리를 위한 객체 생성 */
     LPOVERLAPPED pOverlapped = (LPOVERLAPPED) malloc(sizeof(OVERLAPPED));
-    pOverlapped->OffsetHigh = 0;
-    pOverlapped->Offset = 0;
+    pOverlapped->OffsetHigh = 0; // 중첩된 처리를 위한 offset 설정
+    pOverlapped->Offset = 0; // offset 에 대한 초기화
     pOverlapped->hEvent = ::CreateEvent(
             NULL, // 이벤트에 대한 속성 정의
             FALSE, // 자동으로 이벤트 초기화 진행
             FALSE, // 이벤트에 대한 초기 값 설정 -> FALSE
             NULL // 이벤트에 대한 이름 정의 시 인자를 넣어준다.
     );
-
+    /** 실제로 쓴 데이터 바이트 수를 저장할 변수 */
     DWORD dwWritten = 0;
+    /** 파일에 대한 쓰기 */
     ::WriteFile(
-            hFileDest,
-            pszBuffer,
-            (DWORD) lFileSize.QuadPart,
-            &dwWritten,
-            pOverlapped
+            hFileDest, // 쓸 파일에 대한 HANDLE 객체
+            pszBuffer, // 쓸 데이터가 저장이된 버퍼
+            (DWORD) lFileSize.QuadPart, // 최대로 쓸 바이트 수
+            &dwWritten, // 실제로 쓴 바이트의 수를 저장하기 위한 변수
+            pOverlapped // 중첩된 처리 및 이벤트 처리를 위한 Overlapped 객체
     );
+    /** 처리 대기 중이 아닌 애러인 경우 */
     if (::GetLastError() != ERROR_IO_PENDING) {
         wprintf(L"write file [ERROR CODE : %d]\r\n", ::GetLastError());
         CloseAll(pszBuffer, hMap, hFileSource, hFileDest);
@@ -110,7 +112,7 @@ int main(int argc, char **argv) {
         free(pOverlapped);
         return 0;
     }
-
+    /** 완료가 될 때 까지 대기 하는 함수 */
     if (::WaitForSingleObject(pOverlapped->hEvent, INFINITE) == WAIT_OBJECT_0) {
         _putws(L"Completed!\r\n");
     }
