@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
     }
 
     /** core를 순회를 하면서 점유 하는 것을 확인하기 위한 반복문 8 core 까지 확인 */
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 24; i++) {
         /**
          * Thread에 대한 특정 core에 대한 점유를 하기 위해서는 점유할 Thread에 대한 handle 값과 core의 위치 값을 넣어줘야 한다.
          * shift 연산을 통해 왼쪽으로 이동하면서 core의 값을 변경을 해준다.
