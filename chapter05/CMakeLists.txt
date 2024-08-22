@@ -3,3 +3,5 @@ cmake_minimum_required(VERSION 3.25)
 
 add_subdirectory(01_execute_process_list)
 add_subdirectory(02_execute_process_list_using_snapshot)
+add_subdirectory(03_shared_memory_ipc_client)
+add_subdirectory(04_shared_memory_ipc_server)
