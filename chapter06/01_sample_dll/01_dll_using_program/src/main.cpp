@@ -4,7 +4,7 @@
 #include <iostream>
 #include <windows.h>
 
-//#pragma comment(lib, "C:\\Users\\fain9\\source\\repos\\dll_test\\x64\\Debug\\dll_test.lib")
+#pragma comment(lib, "C:\\Users\\fain9\\source\\repos\\inflearn-window-system-study\\chapter06\\01_sample_dll\\x64\\Debug\\01_dll_library.lib")
 extern "C" {
 void WINAPI DLLTestFunction(int nParam);
 }

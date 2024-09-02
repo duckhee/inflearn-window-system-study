@@ -1,0 +1,2 @@
+﻿  main.cpp
+LINK : fatal error LNK1104: cannot open file 'C:\Users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\x64\Debug\dll_test.lib'

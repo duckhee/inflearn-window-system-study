@@ -1,0 +1,11 @@
+﻿  dllmain.cpp
+  pch.cpp
+LINK : warning C4727: PCH named c:\users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\01_dll_library\x64\release\01_dll_library.pch with same timestamp found in c:\users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\01_dll_library\x64\release\pch.obj and c:\users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\01_dll_library\x64\release\dllmain.obj.  Using first PCH.
+     Creating library C:\Users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\x64\Release\01_dll_library.lib and object C:\Users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\x64\Release\01_dll_library.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  01_dll_library.vcxproj -> C:\Users\fain9\source\repos\inflearn-window-system-study\chapter06\01_sample_dll\x64\Release\01_dll_library.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
