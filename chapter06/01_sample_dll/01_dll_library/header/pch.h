@@ -11,6 +11,7 @@
 #include "framework.h"
 
 
+/** 외부에 공개할 함수에 대해서 정의 */
 extern "C" {
 __declspec(dllexport) void WINAPI DLLTestFunction(int nParam);
 }
